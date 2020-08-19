@@ -1,0 +1,183 @@
+@base <https://shapetrees.pub/ts/medical-record/> .
+@prefix st: <http://www.w3.org/ns/shapetree#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+    st:hasShapeTreeDecoratorIndex <series-iri> .
+
+<#medicalRecords>
+    st:contains <#medicalRecord>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer ;
+
+    st:references
+      [ st:hasShapeTree <#patients> ]
+      [ st:hasShapeTree <#appointments> ]
+      [ st:hasShapeTree <#conditions> ]
+      [ st:hasShapeTree <#encounters> ]
+      [ st:hasShapeTree <#prescriptions> ]
+      [ st:hasShapeTree <#allergies> ]
+      [ st:hasShapeTree <#observations> ]
+      [ st:hasShapeTree <#diagnosticReports> ]
+      [ st:hasShapeTree <#activities> ]
+      [ st:hasShapeTree <#practitioners> ]
+      [ st:hasShapeTree <#documents> ]
+    .
+
+<#medicalRecord>
+    st:validatedBy <medrecord-schema#medicalRecord> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource,
+    st:references [
+        st:hasShapeTree <#patient> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:patient"
+    ],
+    [
+        st:hasShapeTree <#appointment> ;
+        st:traverseViaShapePath "<@medrecord-schema#medicalRecord>/medrecord:appointment"
+    ],
+    [
+        st:hasShapeTree <#condition> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:condition"
+    ],
+    [
+        st:hasShapeTree <#encounter> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:encounter"
+    ],
+    [
+        st:hasShapeTree <#prescription> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:prescription"
+    ],
+    [
+        st:hasShapeTree <#allergy> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:allergy"
+    ],
+    [
+        st:hasShapeTree <#observation> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:observation"
+    ],
+    [
+        st:hasShapeTree <#diagnosticReport> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:diagnosticReport"
+    ] ,
+    [
+        st:hasShapeTree <#activity> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:activity"
+    ],
+    [
+        st:hasShapeTree <#practitioner> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:practitioner"
+    ],
+    [
+        st:hasShapeTree <#document> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:document"
+    ] .
+
+<#patients>
+    st:contains <#patient>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#patient>
+    st:validatedBy <https://www.hl7.org/fhir/patient.shex#Patient> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#appointments>
+    rdfs:label "appointments" ;
+    st:contains <#appointment>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#appointment>
+    st:validatedBy <https://www.hl7.org/fhir/appointment.shex#Appointment> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#conditions>
+    rdfs:label "conditions" ;
+    st:contains <#condition>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#condition>
+    st:validatedBy <https://www.hl7.org/fhir/condition.shex#Condition> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#encounters>
+    rdfs:label "encounters" ;
+    st:contains <#encounter>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#encounter>
+    st:validatedBy <https://www.hl7.org/fhir/encounter.shex#Encounter> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#prescriptions>
+    rdfs:label "prescriptions" ;
+    st:contains <#prescription>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#prescription>
+    st:validatedBy <https://www.hl7.org/fhir/medicationrequest.shex#MedicationRequest> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#allergies>
+    rdfs:label "allergies" ;
+    st:contains <#allergy>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#allergy>
+    st:validatedBy <https://www.hl7.org/fhir/allergyintolerance.shex#AllergyIntolerance> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#observations>
+    rdfs:label "observations" ;
+    st:contains <#observation>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#observation>
+    st:validatedBy <https://www.hl7.org/fhir/observation.shex#Observation> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#diagnosticReports>
+    rdfs:label "diagnosticReports" ;
+    st:contains <#diagnosticReport>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#diagnosticReport>
+    st:validatedBy <https://www.hl7.org/fhir/diagnosticreport.shex#DiagnosticReport> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#activities>
+    rdfs:label "activities" ;
+    st:contains <#activity>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#activity>
+    st:validatedBy <TBD-BASED-ON_VOCABULARY_USED> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#practitioners>
+    rdfs:label "practitioners" ;
+    st:contains <#practitioner>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#practitioner>
+    st:validatedBy <https://www.hl7.org/fhir/practitioner.shex#Practitioner> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#documents>
+    rdfs:label "documents" ;
+    st:contains <#document>, st:AllowNonRDFSource ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#document>
+    st:validatedBy <https://www.hl7.org/fhir/documentreference.shex#DocumentReference> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
