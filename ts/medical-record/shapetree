@@ -1,4 +1,4 @@
-@base <https://shapetrees.pub/ts/medical-record/> .
+@base <https://shapetrees.pub/ts/medical-record/shapetree#> .
 @prefix st: <http://www.w3.org/ns/shapetree#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
