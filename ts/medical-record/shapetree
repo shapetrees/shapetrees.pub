@@ -11,23 +11,23 @@
     st:expectsType st:ShapeTreeContainer ;
 
     st:references
-      [ st:hasShapeTree <#patients> ]
-      [ st:hasShapeTree <#appointments> ]
-      [ st:hasShapeTree <#conditions> ]
-      [ st:hasShapeTree <#encounters> ]
-      [ st:hasShapeTree <#prescriptions> ]
-      [ st:hasShapeTree <#allergies> ]
-      [ st:hasShapeTree <#observations> ]
-      [ st:hasShapeTree <#diagnosticReports> ]
-      [ st:hasShapeTree <#activities> ]
-      [ st:hasShapeTree <#practitioners> ]
+      [ st:hasShapeTree <#patients> ],
+      [ st:hasShapeTree <#appointments> ],
+      [ st:hasShapeTree <#conditions> ],
+      [ st:hasShapeTree <#encounters> ],
+      [ st:hasShapeTree <#prescriptions> ],
+      [ st:hasShapeTree <#allergies> ],
+      [ st:hasShapeTree <#observations> ],
+      [ st:hasShapeTree <#diagnosticReports> ],
+      [ st:hasShapeTree <#activities> ],
+      [ st:hasShapeTree <#practitioners> ],
       [ st:hasShapeTree <#documents> ]
     .
 
 <#medicalRecord>
     st:validatedBy <medrecord-schema#medicalRecord> ;
     st:matchesUriTemplate "{id}" ;
-    st:expectsType st:ShapeTreeResource,
+    st:expectsType st:ShapeTreeResource ;
     st:references [
         st:hasShapeTree <#patient> ;
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:patient"
