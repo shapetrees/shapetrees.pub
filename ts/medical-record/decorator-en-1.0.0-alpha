@@ -1,0 +1,77 @@
+@prefix st: <http://www.w3.org/ns/shapetree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix med: <http://shapetrees.pub/ts/medical-record/shapetree#> .
+
+<> a st:ShapeTreeDecoratorResource .
+
+<#medicalRecordDecorator>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:medicalRecord ;
+  skos:prefLabel "Medical Record"@en ;
+  skos:definition "Personal health record for a patient, referencing all aspects of their clinical records"@en .
+
+<#patientDecorator>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:patient ;
+  skos:prefLabel "Patient Information"@en ;
+  skos:definition "General details about the patient, such as name, gender, address, contact information, marital status, and language preference."@en .
+
+<#appointment>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:appointment ;
+  skos:prefLabel "Appointment"@en ;
+  skos:definition "Information about future or past appointments for a patient, such as a scheduled surgery, clinical visit follow-up, or a scheduled diagnostic test."@en .
+
+<#condition>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:condition ;
+  skos:prefLabel "Condition"@en ;
+  skos:definition "Information about a given condition, problem, diagnosis, or issue."@en .
+
+<#encounter>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:encounter ;
+  skos:prefLabel "Encounter"@en ;
+  skos:definition "Detailing the lifecycle of clinical encounters including ambulatory, emergency, home-health, inpatient, and virtual."@en .
+
+<#prescription>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:prescription ;
+  skos:prefLabel "Prescription"@en ;
+  skos:definition "Representing medications that are to be or have been dispensed to the patient."@en .
+
+<#allergy>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:allergy ;
+  skos:prefLabel "Allergy"@en ;
+  skos:definition "Clinical assessments of an allergy or potential risk of adverse reactions when exposed to a certain class of substance."@en .
+
+<#observation>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:observation ;
+  skos:prefLabel "Observation"@en ;
+  skos:definition "A broad spectrum of recorded observations from vitals and lab results to social history and bone density."@en .
+
+<#diagnosticReport>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:diagnosticReport ;
+  skos:prefLabel "Diagnostic Report"@en ;
+  skos:definition "Results of dianostics tests performed on a given patient"@en .
+
+<#activity>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:activity ;
+  skos:prefLabel "Activity"@en ;
+  skos:definition "Activities that have been or will be performed on or on behalf of the patient"@en .
+
+<#practitioner>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:practitioner ;
+  skos:prefLabel "Practitioner"@en ;
+  skos:definition "Practitioners associated with the patient"@en .
+
+<#document>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:medicalRecord ;
+  skos:prefLabel "Document"@en ;
+  skos:definition "Any clinical documents that have been prepared for or on behalf of the patient"@en .
