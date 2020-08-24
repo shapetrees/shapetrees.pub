@@ -73,6 +73,6 @@
 
 <#document>
   a st:ShapeTreeDecorator ;
-  st:hasShapeTree med:medicalRecord ;
+  st:hasShapeTree med:document ;
   skos:prefLabel "Document"@en ;
   skos:definition "Any clinical documents that have been prepared for or on behalf of the patient"@en .
