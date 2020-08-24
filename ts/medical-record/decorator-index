@@ -1,0 +1,18 @@
+@prefix st: <http://www.w3.org/ns/shapetree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+  a st:ShapeTreeDecoratorIndex ;
+  st:defaultLanguage "en"^^xsd:language ;
+  st:hasSeries <#series-en> .
+
+<#series-en>
+  a st:ShapeTreeDecoratorSeries ;
+  st:usesLanguage "en"^^xsd:language ;
+  st:hasVersion <#en-1-0-0-alpha> .
+
+<#en-1-0-0-alpha>
+  a st:ShapeTreeDecoratorVersion ;
+  st:isVersion "1.0.0-alpha" ;
+  st:hasSHA256 "";
+  st:hasShapeTreeDecoratorResource <decorator-en-1.0.0-alpha> .
