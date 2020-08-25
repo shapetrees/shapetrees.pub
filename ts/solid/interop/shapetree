@@ -1,5 +1,5 @@
 @prefix st: <http://www.w3.org/ns/shapetree#> .
-@prefix ecos: <https://shapes.pub/ns/solid/interop#> .
+@prefix ecos: <https://shapes.pub/ns/solid/interop/shex#> .
 
 # Agent
 ##############################################################################
