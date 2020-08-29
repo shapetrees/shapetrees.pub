@@ -158,7 +158,7 @@
     st:expectsType st:ShapeTreeContainer .
 
 <#activity>
-    st:validatedBy <TBD-BASED-ON_VOCABULARY_USED> ;
+    st:validatedBy <https://xformativ.pub/xfh-patient/as/shapes/shex#Activity> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
 
