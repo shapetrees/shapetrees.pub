@@ -12,7 +12,7 @@
 <#agent-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeResource ;
-  st:validatedBy <ecos#AgentShape> ;
+  st:validatedBy ecos:AgentShape ;
   st:matchesUriTemplate "id" .
 
 # Registrar
@@ -20,7 +20,7 @@
 <#registrar-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeContainer ;
-  st:validatedBy <ecos#RegistrarShape> ;
+  st:validatedBy ecos:RegistrarShape ;
   st:contains <#application-registry-set-tree> ,
                 <#data-registry-set-tree> ,
                 st:AllowNone .
@@ -28,13 +28,13 @@
 <#application-registry-set-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeResource ;
-  st:validatedBy <ecos#ApplicationRegistrySetShape> ;
+  st:validatedBy ecos:ApplicationRegistrySetShape ;
   st:matchesUriTemplate "application" .
 
 <#data-registry-set-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeResource ;
-  st:validatedBy <ecos#DataRegistrySetShape> ;
+  st:validatedBy ecos:DataRegistrySetShape ;
   st:matchesUriTemplate "data" .
 
 # Application Registry
@@ -46,7 +46,7 @@
 <#application-registry-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeContainer ;
-  st:validatedBy <ecos#ApplicationRegistryShape> ;
+  st:validatedBy ecos:ApplicationRegistryShape ;
   st:contains <#application-registration-tree> ,
                 st:AllowNone .
 
@@ -59,7 +59,7 @@
 <#application-registration-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeContainer ;
-  st:validatedBy <ecos#ApplicationRegistrationShape> ;
+  st:validatedBy ecos:ApplicationRegistrationShape ;
   st:matchesUriTemplate "{id}" .
 
 # Data Registry
@@ -71,7 +71,7 @@
 <#data-registry-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeContainer ;
-  st:validatedBy <ecos#DataRegistryShape> ;
+  st:validatedBy ecos:DataRegistryShape ;
   st:contains <#data-registration-tree> ,
                 st:AllowNone .
 
@@ -84,5 +84,5 @@
 <#data-registration-tree>
   a st:ShapeTree;
   st:expectsType st:ShapeTreeContainer ;
-  st:validatedBy <ecos#DataRegistrationShape> ;
+  st:validatedBy ecos:DataRegistrationShape ;
   st:matchesUriTemplate "{id}" .
