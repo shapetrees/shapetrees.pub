@@ -174,7 +174,7 @@
 
 <#documents>
     rdfs:label "documents" ;
-    st:contains <#document>, st:AllowNonRDFSource ;
+    st:contains <#document>, st:AllowNonRDFSources ;
     st:expectsType st:ShapeTreeContainer .
 
 <#document>
@@ -184,7 +184,7 @@
 
 <#questionnaire-responses>
     rdfs:label "questionnaire responses" ;
-    st:contains <#questionnaire-response>, st:AllowNonRDFSource ;
+    st:contains <#questionnaire-response>, st:AllowNone ;
     st:expectsType st:ShapeTreeContainer .
 
 <#questionnaire-response>
