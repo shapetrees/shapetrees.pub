@@ -181,3 +181,13 @@
     st:validatedBy <https://www.hl7.org/fhir/documentreference.shex#DocumentReference> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
+
+<#questionnaire-responses>
+    rdfs:label "questionnaire responses" ;
+    st:contains <#questionnaire-response>, st:AllowNonRDFSource ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#questionnaire-response>
+    st:validatedBy <https://www.hl7.org/fhir/questionnaireresponse.shex#QuestionnaireResponse> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
