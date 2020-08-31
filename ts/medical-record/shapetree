@@ -158,7 +158,7 @@
     st:expectsType st:ShapeTreeContainer .
 
 <#activity>
-    st:validatedBy <https://xformativ.pub/xfh-patient/as/shapes/shex#Activity> ;
+    st:validatedBy <https://xformativ.pub/xfh-patient/as/shapes/shex#DailyActivitySummary> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
 
