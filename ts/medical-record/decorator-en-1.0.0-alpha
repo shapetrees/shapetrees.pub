@@ -1,6 +1,6 @@
 @prefix st: <http://www.w3.org/ns/shapetree#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix med: <http://shapetrees.pub/ts/medical-record/shapetree#> .
+@prefix med: <https://shapetrees.pub/ts/medical-record/shapetree#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <> a st:ShapeTreeDecoratorResource .
