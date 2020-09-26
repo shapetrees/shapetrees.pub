@@ -72,6 +72,10 @@
     [
         st:hasShapeTree <#document> ;
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:document"
+    ],
+    [
+        st:hasShapeTree <#questionnaire-response> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:questionnaireResponse"
     ] .
 
 <#patients>
