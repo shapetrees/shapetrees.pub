@@ -63,7 +63,7 @@
   a st:ShapeTreeDecorator ;
   st:hasShapeTree med:activity ;
   skos:prefLabel "Activity"@en ;
-  skos:definition "Activities that have been or will be performed on or on behalf of the patient"@en .
+  skos:definition "A patient's personal activity information including steps and exercise"@en .
 
 <#practitioner>
   a st:ShapeTreeDecorator ;
@@ -76,3 +76,9 @@
   st:hasShapeTree med:document ;
   skos:prefLabel "Document"@en ;
   skos:definition "Any clinical documents that have been prepared for or on behalf of the patient"@en .
+
+<#questionnaire-response>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:questionnaire-response ;
+  skos:prefLabel "Questionnaires"@en ;
+  skos:definition "Responses to questionnaires provided by the patient"@en .

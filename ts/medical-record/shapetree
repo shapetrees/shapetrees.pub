@@ -21,7 +21,8 @@
       [ st:hasShapeTree <#diagnosticReports> ],
       [ st:hasShapeTree <#activities> ],
       [ st:hasShapeTree <#practitioners> ],
-      [ st:hasShapeTree <#documents> ]
+      [ st:hasShapeTree <#documents> ],
+      [ st:hasShapeTree <#questionnaire-responses> ]
     .
 
 <#medicalRecord>
