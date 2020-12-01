@@ -44,7 +44,7 @@
 <#allergy>
   a st:ShapeTreeDecorator ;
   st:hasShapeTree med:allergy ;
-  skos:prefLabel "Allergy"@en ;
+  skos:prefLabel "Allergies and Adverse Reactions"@en ;
   skos:definition "Clinical assessments of an allergy or potential risk of adverse reactions when exposed to a certain class of substance."@en .
 
 <#observation>
