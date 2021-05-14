@@ -23,7 +23,7 @@
       [ st:hasShapeTree <#practitioners> ],
       [ st:hasShapeTree <#documents> ],
       [ st:hasShapeTree <#questionnaire-responses> ],
-      [ st:hasShapeTree <#immunization> ]
+      [ st:hasShapeTree <#immunizations> ]
     .
 
 <#medicalRecord>
