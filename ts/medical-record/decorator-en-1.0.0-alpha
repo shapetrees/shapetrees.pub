@@ -57,7 +57,7 @@
   a st:ShapeTreeDecorator ;
   st:hasShapeTree med:diagnosticReport ;
   skos:prefLabel "Diagnostic Report"@en ;
-  skos:definition "Results of dianostics tests performed on a given patient"@en .
+  skos:definition "Results of diagnostics tests performed on a given patient"@en .
 
 <#activity>
   a st:ShapeTreeDecorator ;
@@ -82,3 +82,9 @@
   st:hasShapeTree med:questionnaire-response ;
   skos:prefLabel "Questionnaires"@en ;
   skos:definition "Responses to questionnaires provided by the patient"@en .
+
+  <#immunization>
+    a st:ShapeTreeDecorator ;
+    st:hasShapeTree med:immunization ;
+    skos:prefLabel "Immunizations"@en ;
+    skos:definition "Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party"@en .
