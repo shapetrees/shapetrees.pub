@@ -22,7 +22,8 @@
       [ st:hasShapeTree <#activities> ],
       [ st:hasShapeTree <#practitioners> ],
       [ st:hasShapeTree <#documents> ],
-      [ st:hasShapeTree <#questionnaire-responses> ]
+      [ st:hasShapeTree <#questionnaire-responses> ],
+      [ st:hasShapeTree <#immunizations> ]
     .
 
 <#medicalRecord>
@@ -76,6 +77,10 @@
     [
         st:hasShapeTree <#questionnaire-response> ;
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:questionnaireResponse"
+    ],
+    [
+            st:hasShapeTree <#immunization> ;
+            st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:immunization"
     ] .
 
 <#patients>
@@ -194,5 +199,15 @@
 
 <#questionnaire-response>
     st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#QuestionnaireResponse> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#immunizations>
+    rdfs:label "immunizations" ;
+    st:contains <#immunization>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#immunization>
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Immunization> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
