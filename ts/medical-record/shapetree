@@ -23,7 +23,8 @@
       [ st:hasShapeTree <#practitioners> ],
       [ st:hasShapeTree <#documents> ],
       [ st:hasShapeTree <#questionnaire-responses> ],
-      [ st:hasShapeTree <#immunizations> ]
+      [ st:hasShapeTree <#immunizations> ],
+      [ st:hasShapeTree <#documentReferences> ]
     .
 
 <#medicalRecord>
@@ -79,8 +80,12 @@
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:questionnaireResponse"
     ],
     [
-            st:hasShapeTree <#immunization> ;
-            st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:immunization"
+        st:hasShapeTree <#immunization> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:immunization"
+    ],
+    [
+        st:hasShapeTree <#documentReference> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:documentReference"
     ] .
 
 <#patients>
@@ -209,5 +214,15 @@
 
 <#immunization>
     st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Immunization> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#documentReferences>
+    rdfs:label "document references" ;
+    st:contains <#documentReference>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#documentReference>
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#DocumentReference> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .

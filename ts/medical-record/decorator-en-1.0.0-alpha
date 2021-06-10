@@ -83,8 +83,14 @@
   skos:prefLabel "Questionnaires"@en ;
   skos:definition "Responses to questionnaires provided by the patient"@en .
 
-  <#immunization>
-    a st:ShapeTreeDecorator ;
-    st:hasShapeTree med:immunization ;
-    skos:prefLabel "Immunizations"@en ;
-    skos:definition "Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party"@en .
+<#immunization>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:immunization ;
+  skos:prefLabel "Immunizations"@en ;
+  skos:definition "Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party"@en .
+
+<#documentReference>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:documentReference ;
+  skos:prefLabel "Document References"@en ;
+  skos:definition "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed."@en .
