@@ -138,7 +138,7 @@
     st:expectsType st:ShapeTreeContainer .
 
 <#procedure>
-    st:validatedBy <https://www.hl7.org/fhir/encounter.shex#Procedure> ;
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Procedure> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
 
