@@ -35,6 +35,12 @@
   skos:prefLabel "Encounters"@en ;
   skos:definition "Detailing the lifecycle of clinical encounters including ambulatory, emergency, home-health, inpatient, and virtual."@en .
 
+<#procedure>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:procedure ;
+  skos:prefLabel "Procedure"@en ;
+  skos:definition "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy."@en .
+
 <#prescription>
   a st:ShapeTreeDecorator ;
   st:hasShapeTree med:prescription ;

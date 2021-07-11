@@ -15,6 +15,7 @@
       [ st:hasShapeTree <#appointments> ],
       [ st:hasShapeTree <#conditions> ],
       [ st:hasShapeTree <#encounters> ],
+      [ st:hasShapeTree <#procedures> ],
       [ st:hasShapeTree <#prescriptions> ],
       [ st:hasShapeTree <#allergies> ],
       [ st:hasShapeTree <#observations> ],
@@ -46,6 +47,10 @@
     [
         st:hasShapeTree <#encounter> ;
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:encounter"
+    ],
+    [
+        st:hasShapeTree <#procedure> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:procedure"
     ],
     [
         st:hasShapeTree <#prescription> ;
@@ -124,6 +129,16 @@
 
 <#encounter>
     st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Encounter> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#procedures>
+    rdfs:label "procedures" ;
+    st:contains <#procedure>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#procedure>
+    st:validatedBy <https://www.hl7.org/fhir/encounter.shex#Procedure> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
 
