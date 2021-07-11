@@ -3,14 +3,14 @@ name: Publish Repo
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: Configure AWS
       uses: aws-actions/configure-aws-credentials@v1
