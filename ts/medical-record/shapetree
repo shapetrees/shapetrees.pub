@@ -25,6 +25,9 @@
       [ st:hasShapeTree <#documents> ],
       [ st:hasShapeTree <#questionnaire-responses> ],
       [ st:hasShapeTree <#immunizations> ],
+      [ st:hasShapeTree <#claims> ],
+      [ st:hasShapeTree <#explanationOfBenefits> ],
+      [ st:hasShapeTree <#coverages> ],
       [ st:hasShapeTree <#documentReferences> ]
     .
 
@@ -87,6 +90,18 @@
     [
         st:hasShapeTree <#immunization> ;
         st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:immunization"
+    ],
+    [
+        st:hasShapeTree <#claim> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:claim"
+    ],
+    [
+        st:hasShapeTree <#explanationOfBenefit> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:explanationOfBenefit"
+    ],
+    [
+        st:hasShapeTree <#coverage> ;
+        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:coverage"
     ],
     [
         st:hasShapeTree <#documentReference> ;
@@ -229,6 +244,36 @@
 
 <#immunization>
     st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Immunization> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+    
+<#claims>
+    rdfs:label "claims" ;
+    st:contains <#claim>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#claim>
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Claim> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .    
+
+<#explanationOfBenefits>
+    rdfs:label "claims" ;
+    st:contains <#claim>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#explanationOfBenefit>
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#ExplanationOfBenefit> ;
+    st:matchesUriTemplate "{id}" ;
+    st:expectsType st:ShapeTreeResource .
+
+<#coverages>
+    rdfs:label "coverages" ;
+    st:contains <#coverage>, st:AllowNone ;
+    st:expectsType st:ShapeTreeContainer .
+
+<#coverage>
+    st:validatedBy <https://shapes.pub/ns/fhir/r4/shex#Coverage> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource .
 
