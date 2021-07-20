@@ -100,3 +100,21 @@
   st:hasShapeTree med:documentReference ;
   skos:prefLabel "Document References"@en ;
   skos:definition "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed."@en .
+
+<#claim>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:claim ;
+  skos:prefLabel "Claims"@en ;
+  skos:definition "Representing professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement."@en .
+
+<#explanationOfBenefit>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:explanationOfBenefit ;
+  skos:prefLabel "Explanation of Benefits"@en ;
+  skos:definition "Representing key information from a Claim, a ClaimResponse and optional Account information to inform a patient of the goods and services rendered by a provider and the settlement made under the patient's coverage in respect of that Claim."@en .
+
+<#coverage>
+  a st:ShapeTreeDecorator ;
+  st:hasShapeTree med:documentReference ;
+  skos:prefLabel "Coverages"@en ;
+  skos:definition "Representing financial instruments which may be used to reimburse or pay for health care products and services."@en .
