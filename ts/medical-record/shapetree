@@ -258,8 +258,8 @@
     st:expectsType st:ShapeTreeResource .    
 
 <#explanationOfBenefits>
-    rdfs:label "claims" ;
-    st:contains <#claim>, st:AllowNone ;
+    rdfs:label "explanation of benefits" ;
+    st:contains <#explanationOfBenefit>, st:AllowNone ;
     st:expectsType st:ShapeTreeContainer .
 
 <#explanationOfBenefit>
