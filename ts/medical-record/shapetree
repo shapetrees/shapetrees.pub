@@ -1,10 +1,12 @@
 @prefix st: <http://www.w3.org/ns/shapetree#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix med: <http://shapetrees.pub/ts/medical-record/> .
+@prefix med: <http://shapes.pub/ns/medical-record/terms#> .
+@prefix medtree: <http://shapetrees.pub/ts/medical-record/> .
+@prefix medshape: <http://shapes.pub/ns/medical-record/shex#> .
 
 <>
-    st:hasShapeTreeDecoratorIndex med:decorator-index .
+    st:hasShapeTreeDecoratorIndex medtree:decorator-index .
 
 <#medicalRecords>
     st:contains <#medicalRecord>, st:AllowNone ;
@@ -32,64 +34,64 @@
     .
 
 <#medicalRecord>
-    st:validatedBy <medrecord-schema#medicalRecord> ;
+    st:validatedBy <medshape:MedicalRecordShape> ;
     st:matchesUriTemplate "{id}" ;
     st:expectsType st:ShapeTreeResource ;
     st:references [
         st:hasShapeTree <#patient> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:patient"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasPatient"
     ],
     [
         st:hasShapeTree <#appointment> ;
-        st:traverseViaShapePath "<@medrecord-schema#medicalRecord>/medrecord:appointment"
+        st:traverseViaShapePath "<@medshape:MedicalRecordShape>/med:hasAppointment"
     ],
     [
         st:hasShapeTree <#condition> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:condition"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasCondition"
     ],
     [
         st:hasShapeTree <#encounter> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:encounter"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasEncounter"
     ],
     [
         st:hasShapeTree <#procedure> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:procedure"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasProcedure"
     ],
     [
         st:hasShapeTree <#prescription> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:prescription"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasPrescription"
     ],
     [
         st:hasShapeTree <#allergy> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:allergy"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasAllergy"
     ],
     [
         st:hasShapeTree <#observation> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:observation"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasObservation"
     ],
     [
         st:hasShapeTree <#diagnosticReport> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:diagnosticReport"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasDiagnosticReport"
     ] ,
     [
         st:hasShapeTree <#activity> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:activity"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasActivity"
     ],
     [
         st:hasShapeTree <#practitioner> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:practitioner"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasPractitioner"
     ],
     [
-        st:hasShapeTree <#document> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:document"
+        st:hasShapeTree <#documentReference> ;
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasDocumentReference"
     ],
     [
         st:hasShapeTree <#questionnaire-response> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:questionnaireResponse"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasQuestionnaireResponse"
     ],
     [
         st:hasShapeTree <#immunization> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:immunization"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasImmunization"
     ],
     [
         st:hasShapeTree <#claim> ;
@@ -105,7 +107,7 @@
     ],
     [
         st:hasShapeTree <#documentReference> ;
-        st:traverseViaShapePath "@<medrecord-schema#medicalRecord>/medrecord:documentReference"
+        st:traverseViaShapePath "@<medshape:MedicalRecordShape>/med:hasDocumentReference"
     ] .
 
 <#patients>
